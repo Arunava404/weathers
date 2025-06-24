@@ -42,25 +42,25 @@ document.addEventListener('DOMContentLoaded',()=>{
 
         switch(data.weather[0].main){
             case 'Clear':
-                weatherImage.src='images/suns.png';
+                weatherImage.src='suns.png';
                 break;
             case 'Rain':
-                weatherImage.src='images/rains.png';
+                weatherImage.src='rains.png';
                 break;    
             case 'Clouds':
                 weatherImage.src='clouds.png';
                 break; 
             case 'Snow':
-                weatherImage.src='images/snows.png';
+                weatherImage.src='snows.png';
                 break;     
             case 'Haze':
-                weatherImage.src='images/mist.png';
+                weatherImage.src='mist.png';
                 break;
             case 'Storm':
-                weatherImage.src ='images/storms.png';
+                weatherImage.src ='storms.png';
                 break;
             case 'Smoke':
-                weatherImage.src =  'images/smoks.png';
+                weatherImage.src =  'smoks.png';
                 brreak;
              default:
                 weatherImage='';             
