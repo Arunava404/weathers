@@ -1,0 +1,250 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1fbcb1;
+
+}
+body h1{
+    color: #0f6aac;
+    font-weight: 900;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: larger;
+}
+.container{
+    position: relative;
+    width: 400px;
+    height: 105px;
+    background: linear-gradient(0deg,hsla(210,90%,80%,1)0%, hsla(212,93%,39%,1 )100%);
+    overflow: hidden;
+    border-radius: 18px;
+    font-family: 'Roboto', sans-serif ;
+    transition: 0.6 ease-out;
+}
+
+.search-box{
+    width: 100%;
+    height: min-content;
+    display: flex;
+    align-items: center;
+    font-family: arial;
+    justify-content: space-between;
+}
+
+.search-box input{
+    color: #fff;
+    width: 80%;
+    background: transparent;
+    font-size: 1.7rem;
+    font-weight: 500;
+    font-family: 'caveat',cursive;
+    padding-left: 32px;
+}
+
+.search-box input::placeholder{
+    font-size: 25px;
+    font-weight:600 ;
+    color: #efefef;
+    text-transform: capitalize;
+}
+
+.search-box button{
+    cursor: pointer;
+    width: 50px;
+    height: 45px;
+    color:#dff6ff ;
+    border-radius: 70%;
+    font-size: 22px;
+    margin-right: 18px;
+    margin-top: 12px;
+}
+
+.search-box button:hover{
+    color: #fff;
+    background-color: aqua;
+}
+
+.search-box i{
+    position:static;
+    color: brown;
+    font-size:25px;
+   }
+
+   .weather-box img{
+     width: 40%;
+     margin-top: 30px;
+     margin-left: 130px;
+    
+   }
+
+.weather-box .temperature{
+    position: relative;
+    color: blueviolet;
+    font-size: 4rem;
+    font-weight: 800;
+    margin-top: 30px;
+    margin-left: 150px;
+
+}
+
+.weather-box .temperature span{
+    position: absolute;
+    margin-left: 2px;
+    font-size: 1.9rem;
+}
+
+.weather-box .description{
+    color: #06283D;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform:inherit;
+    margin-left: 140px;
+}
+
+.weather-details{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3px;
+}
+
+.weather-details .humidity, .weather-details .wind{
+    display:flex;
+    align-items: center;
+    width: 50%;
+    height: 80px;
+}
+
+.weather-details .humidity{
+    justify-content: flex-start;
+    margin-left: 20px;
+}
+
+.weather-details .wind{
+    justify-content: flex-end;
+    margin-top: -80px;
+    margin-left: 160px;
+}
+
+.weather-details i{
+    color: #b609d8;
+    font: size 56px; 
+    margin-right: 10px;
+    margin-top: 6px;
+}
+
+.weather-details span{
+    color: #053233;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.weather-details p{
+    color: #06283D;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.footer p{
+    color: #aff1fe;
+    font-weight: 800;
+    font-size: larger;
+
+}
+
+/*.weather-box, .weather-details{
+   display: none;
+    opacity: 0;
+}*/
+
+/*.fadeIn{
+    animation: 0.5s fadeIn forwards;
+    animation-delay: 0.5s;
+}*/
+    .weather-box,
+.weather-details {
+  display: none;
+  opacity: 0;
+}
+
+.fadeIn {
+  animation: fadeIn 6s ease forwards;
+}
+
+/*@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}*/
+
+@keyframes fadeIn{
+ to{
+    scale:1;
+    opacity: 10;
+ }
+}
+/*@keyframes rotate{
+    from{
+        -webkit-transform: rotate(0deg);
+    }
+    to{
+        -webkit-transform: rotate(360deg);
+    }
+}*/
+
+.load{
+    width:100px;
+    height: 100px;
+    margin: 11px auto 0;
+    border: solid 5px #ffffff;
+    border-radius: 50%;
+    border-right-color: transparent;
+    border-bottom-color: transparent ;
+     -webkit-transition: all 0.5 ease-in;
+     -webkit-animation-name:    rotate;
+    -webkit-animation-duration:  2.0s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+        transition: all 0.5 ease-in;
+    animation-name:rotate;
+    animation-duration: 2.0s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;    
+
+    /*media query*/
+
+}
+@media screen and (max-width: 1000px) {
+  body {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 20px;
+    height:auto ;
+  }
+
+  .container {
+    width: 93%;
+    margin: 0 auto;
+  }
+
+  h1 {
+    font-size: 1.1rem;
+    text-align: center;
+    color: white;
+    margin-bottom: 15px;
+  }
+}
