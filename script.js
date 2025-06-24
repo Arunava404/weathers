@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded',()=>{
                 weatherImage.src='images/rains.png';
                 break;    
             case 'Clouds':
-                weatherImage.src='images/clouds.png';
+                weatherImage.src='clouds.png';
                 break; 
             case 'Snow':
                 weatherImage.src='images/snows.png';
